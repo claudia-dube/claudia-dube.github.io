@@ -1401,7 +1401,6 @@ img {
   color: var(--bg) !important;
   opacity: 1 !important;
   padding: 0.6rem 1.6rem !important;
-  border-radius: 500rem !important;
   font-size: 1rem !important;
   font-family: "Space Mono", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
   letter-spacing: 0.05rem !important;
@@ -1494,7 +1493,7 @@ img {
   margin: 0 !important;
 }
 .notion-image img {
-  border-radius: 0.05rem !important;
+
 }
 
 .super-content {
@@ -1650,7 +1649,6 @@ img {
 }
 #page-index .notion-collection-gallery.large .notion-collection-card {
   box-shadow: none !important;
-  border-radius: 0.5rem !important;
 }
 #page-index .notion-collection-gallery.large .notion-collection-card img {
   transform: scale(1) !important;
@@ -1683,7 +1681,7 @@ img {
 }
 #page-index .notion-collection-gallery.large .notion-collection-card .notion-collection-card__cover {
   min-height: 25rem !important;
-  background: var(--contrast) !important;
+  background: var(--bg) !important;
   position: relative !important;
 }
 #page-index .notion-collection-gallery.large .notion-collection-card .notion-property__title {
@@ -1827,7 +1825,6 @@ img {
 }
 #page-work .notion-collection-gallery.large .notion-collection-card {
   box-shadow: none !important;
-  border-radius: 0.5rem !important;
 }
 #page-work .notion-collection-gallery.large .notion-collection-card img {
   transform: scale(1) !important;
@@ -1920,7 +1917,6 @@ img {
 #page-writing .notion-collection-gallery.large .notion-collection-card,
 #page-blog .notion-collection-gallery.large .notion-collection-card {
   box-shadow: none !important;
-  border-radius: 0.5rem !important;
   background: none !important;
   margin-bottom: 2rem !important;
 }
@@ -1937,7 +1933,6 @@ img {
   height: 28rem !important;
   max-height: 28rem !important;
   border-bottom: none !important;
-  border-radius: 0.5rem !important;
 }
 @media (max-width: 767.98px) {
   #page-writing .notion-collection-gallery.large .notion-collection-card .notion-collection-card__cover,
@@ -2101,7 +2096,6 @@ img {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   padding: 0 !important;
-  border-radius: 0 !important;
   text-align: left !important;
 }
 .notion-callout.border {
@@ -2137,6 +2131,5 @@ img {
 
   padding: 0.2rem 0.5rem 0.3rem !important;
   margin-right: 0.25rem !important;
-  /* border-radius: 0.25rem !important; */
   text-align: center;
 }
