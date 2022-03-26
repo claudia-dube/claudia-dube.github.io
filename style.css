@@ -1358,6 +1358,7 @@ img {
 
 .notion-heading {
   padding: 0 !important;
+  font-weight: 300;
 }
 
 .notion-collection-gallery {
