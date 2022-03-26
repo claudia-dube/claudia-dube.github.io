@@ -1176,6 +1176,7 @@ This is where you update your template's colors.
 .notion-divider,
 .notion-toggle {
   display: none !important;
+  margin: 1rem !important;
 }
 
 
@@ -1265,14 +1266,15 @@ h1 {
 h1.notion-heading {
   font-style: normal !important;
   margin-top: 6rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   font-size: 3.5rem !important;
-  text-align: center;
+  text-align: center !important;
   width: 65%;
   line-height: 1.3 !important;
+  font-weight: 300 !important;
 }
 @media (max-width: 1199.98px) {
   h1.notion-heading {
@@ -1283,7 +1285,7 @@ h1.notion-heading {
   h1.notion-heading {
     margin-top: 4rem !important;
     font-size: 2.3875rem !important;
-    text-align: left !important;
+    text-align: center !important;
     margin-bottom: 1.25rem !important;
   }
 }
@@ -1296,12 +1298,13 @@ h2.notion-heading {
   letter-spacing: 0.025rem !important;
   font-style: normal !important;
   text-transform: uppercase !important;
-  font-size: 2rem !important;
-  text-align: center;
+  font-size: 1.5rem !important;
+  text-align: center !important;
+  margin: 1rem !important;
 }
 
 h3 {
-  margin-bottom: 0.5rem !important;
+  margin: 1rem !important;
   font-style: normal !important;
   font-size: 1.25rem !important;
 }
