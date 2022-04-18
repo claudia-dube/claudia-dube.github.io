@@ -1,0 +1,39 @@
+<style>
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 40rem;
+  max-width: 450px;
+  margin: 2rem;
+  box-shadow: none;
+  background: none;
+}
+
+.card-side {
+  height: 35rem;
+  border-radius: 15px;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  padding:2rem;
+  color: white
+}
+.card-side.front {
+  background-image: url("https://claudia-dube.github.io/182A0612.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card:hover .card-side.front {
+  transform: rotateY(-30deg);
+}
+</style>
+
+<div class="card">
+  
+  <div class="card-side front"> 
+  </div>
+</div>
