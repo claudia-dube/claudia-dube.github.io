@@ -1,8 +1,9 @@
 <style>
-<style>
 .card {
   perspective: 150rem;
-  width: 100%;
+  position: relative;
+  height: 40rem;
+  max-width: 478px;
   margin: 2rem;
   box-shadow: none;
   background: none;
@@ -20,18 +21,29 @@
   padding:2rem;
   color: white
 }
+
+.card-side.back {
+  transform: rotateY(-180deg);
+   background-image: url("https://claudia-dube.github.io/card.png");
+  background-repeat: no-repeat;
+}
+
 .card-side.front {
-  background-image: url("https://claudia-dube.github.io/card.png");
+   background-image: url("https://claudia-dube.github.io/card.png");
   background-repeat: no-repeat;
 }
 
 .card:hover .card-side.front {
-  transform: rotateY(-30deg);
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
 }
 </style>
-
 <div class="card">
-  
-  <div class="card-side front"> 
+  <div class="card-side front">
+  </div>
+  <div class="card-side back">
   </div>
 </div>
