@@ -2,33 +2,36 @@
 .card {
   perspective: 150rem;
   position: relative;
-  height: 40rem;
+  height: 100vh;
   max-width: 478px;
-  margin: 2rem;
   box-shadow: none;
   background: none;
+  border: 2px solid #FF10F0;
 }
 
 .card-side {
-  height: 35rem;
+  height: 100vh;
+  width: 100%;
   border-radius: 15px;
   transition: all 0.8s ease;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  border: 2px solid #39FF14;
 }
 
 .card-side.back {
   transform: rotateY(-180deg);
    background-image: url("https://claudia-dube.github.io/card.png");
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .card-side.front {
    background-image: url("https://claudia-dube.github.io/card.png");
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .card:hover .card-side.front {
