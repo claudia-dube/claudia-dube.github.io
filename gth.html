@@ -1,6 +1,12 @@
 <style>
+.card-set{
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  block-size: fit-content
+}
 .card-row{
-  width: 100%
+  width: 100%;
 }
 .card-container {
   perspective: 500px;
@@ -28,11 +34,12 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  scrolling: no;
 }
 
 .card {
   aspect-ratio: 5/7;
-  height: 500px;
+  height: 300px;
   margin: 10px;
   
 }
@@ -52,9 +59,9 @@
 img {
  width: 100%;
 }
-
 </style>
-
+<!-- Thanks to adorable.io for the great avatars ! -->
+<div class="card-set">
 <!-- ROW ONE  -->
 <div class="card-row">
 <div class="cards-container">
@@ -289,4 +296,5 @@ img {
   </div>
 
   </div>
+</div>
 </div>
