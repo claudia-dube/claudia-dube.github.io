@@ -1,50 +1,42 @@
 <style>
-.card-set{
-  position: absolute;
-  width: fit-content;
-  height: fit-content;
-  block-size: fit-content
-}
+
+
 .card-row{
   width: 100%;
+  border: 2px solid #ff00ff;
 }
 .card-container {
-  perspective: 500px;
+  display: inline-block;
+  width: 100%;
+  border: 2px solid #00FFFF;
 }
 
 .card-container:hover .card{
   transform: rotateY( 180deg );
 }
 
-.card {
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-.front, .back {
-  backface-visibility: hidden;
-}
-
 .back {
   transform: rotateY( 180deg );
 }
 
-/*Custom Styles*/
 .cards-container{
   display: flex;
   flex-direction: row;
   justify-content: center;
   scrolling: no;
+  border: 2px solid #00FF00
 }
 
 .card {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
   aspect-ratio: 5/7;
-  height: 300px;
+  max-height: 300px;
   margin: 10px;
-  
 }
 
 .front, .back {
+  backface-visibility: hidden;
   box-shadow: 0 1px 6px 0;
   position: absolute;
   width: 100%;
