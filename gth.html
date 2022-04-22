@@ -1,10 +1,13 @@
 <style>
 .card-row{
   width: 100%;
+  border: 2px solid #FF00FF;
+  justify-content: center;
+  align-items: center;
 }
 .card-container {
-  display: inline-block;
   width: 100%;
+  border: 2px solid #0000FF; 
 }
 
 .card-container:hover .card{
@@ -19,28 +22,38 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border: 2px solid #00FFFF;
+  max-width: 100%;
+  align-items: center;
+  
 }
 
 .card {
   transition: transform 0.5s;
   transform-style: preserve-3d;
   aspect-ratio: 5/7;
-  max-height: 300px;
+  max-width: 100%;
+  max-height: 100%;
   margin: 10px;
+  border: 2px solid #FF0000;
+  justify-content: center;
+  align-items: center;
 }
 
 .front, .back {
   backface-visibility: hidden;
   box-shadow: 0 1px 6px 0;
   position: absolute;
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
   top: 0;
   bottom: 0;
+  right: 0;
+  left: 0;
   overflow: hidden;
-  display: flex;
   object-fit: cover;
+  border: 2px solid #FF00FF;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
