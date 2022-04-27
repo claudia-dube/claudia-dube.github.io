@@ -1,0 +1,83 @@
+<style>
+html, body{
+  margin: 0;
+  padding: 0;
+}
+canvas{
+  display: block;
+}
+
+</style>
+
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script>
+// Daniel Shiffman
+// http://codingtra.in
+// http://patreon.com/codingtrain
+// Video: https://youtu.be/FUI7HEEz9B0
+
+let angle = 0;
+let p = -200
+let s, o, l, e, y, letters;
+
+function preload() {
+  s = loadModel('https://claudia-dube.github.io/S.obj');
+  o = loadModel('https://claudia-dube.github.io/O.obj');
+  l = loadModel('https://claudia-dube.github.io/L.obj');
+  e = loadModel('https://claudia-dube.github.io/E.obj');
+  y = loadModel('https://claudia-dube.github.io/Y.obj');
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  // letters = ();
+}
+
+function draw() {
+  background(22,22,22);
+  scale(1.5);
+  rotateX(PI);
+  directionalLight(255, 255, 255, 0, 0, -1);
+  ambientMaterial(255,255,255);
+
+
+  push();
+  translate(p,0,0)
+  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
+  model(s);
+  pop();
+
+  push();
+  translate(p+75,0,0)
+  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
+  model(o);
+  pop();
+
+  push();
+  translate((p+75*2),0,0)
+  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
+  model(l);
+  pop();
+
+  push();
+  translate((p+75*3),0,0)
+  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
+  model(e);
+  pop();
+
+  push();
+  translate((p+75*4),0,0)
+  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
+  model(l);
+  pop();
+
+  push();
+  translate((p+75*5),0,0)
+  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
+  model(y);
+  pop();
+}
+
+</script>
+</head>
