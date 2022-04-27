@@ -6,70 +6,65 @@ canvas{
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 <script>
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
-// Video: https://youtu.be/FUI7HEEz9B0
-
+let font, a;
+let hasNormalMaterial = true;
 let angle = 0;
-let p = -200;
-let s, o, l, e, y, letters;
+let p = -200
 
 function preload() {
-  s = loadModel('https://claudia-dube.github.io/S.obj');
-  o = loadModel('https://claudia-dube.github.io/O.obj');
-  l = loadModel('https://claudia-dube.github.io/L.obj');
-  e = loadModel('https://claudia-dube.github.io/E.obj');
-  y = loadModel('https://claudia-dube.github.io/Y.obj');
+  font = loadFont('https://claudia-dube.github.io/SwearDisplayDemo-Light.otf')
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, 600, WEBGL);
+  textFont(font);
   // letters = ();
 }
 
 function draw() {
-  background(22,22,22);
-  scale(1.5);
-  rotateX(PI);
-  directionalLight(255, 255, 255, 0, 0, -1);
-  ambientMaterial(255,255,255);
+  background('#161616');
+  textAlign(CENTER,CENTER);
+  textSize(100);
+  shininess(0);
+  noStroke();
+  normalMaterial();
+  scale(1.2);
 
-
+  
   push();
-  translate(p,0,0);
-  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
-  model(s);
+  translate(p,0,0)
+  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
+  text('S', 0, -10);
   pop();
-
+  
   push();
-  translate(p+75,0,0);
-  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
-  model(o);
+  translate(p+75,0,0)
+  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
+  text('O', 0, -10);
   pop();
-
+  
   push();
-  translate((p+75*2),0,0);
-  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
-  model(l);
+  translate((p+75*2),0,0)
+  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
+  text('L', 0, -10);
   pop();
-
+  
   push();
-  translate((p+75*3),0,0);
-  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
-  model(e);
+  translate((p+75*3),0,0)
+  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
+  text('E', 0, -10);
   pop();
-
+  
   push();
-  translate((p+75*4),0,0);
-  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
-  model(l);
+  translate((p+75*4),0,0)
+  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
+  text('L', 0, -10);
   pop();
-
+  
   push();
-  translate((p+75*5),0,0);
-  rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
-  model(y);
+  translate((p+75*5),0,0)
+  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
+  text('Y', 0, -10);
   pop();
 }
 
