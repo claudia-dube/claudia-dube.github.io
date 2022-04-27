@@ -1,8 +1,4 @@
 <style>
-html, body{
-  margin: 0;
-  padding: 0;
-}
 canvas{
   display: block;
 }
@@ -17,7 +13,7 @@ canvas{
 // Video: https://youtu.be/FUI7HEEz9B0
 
 let angle = 0;
-let p = -200
+let p = -200;
 let s, o, l, e, y, letters;
 
 function preload() {
@@ -42,37 +38,37 @@ function draw() {
 
 
   push();
-  translate(p,0,0)
+  translate(p,0,0);
   rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
   model(s);
   pop();
 
   push();
-  translate(p+75,0,0)
+  translate(p+75,0,0);
   rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
   model(o);
   pop();
 
   push();
-  translate((p+75*2),0,0)
+  translate((p+75*2),0,0);
   rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
   model(l);
   pop();
 
   push();
-  translate((p+75*3),0,0)
+  translate((p+75*3),0,0);
   rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
   model(e);
   pop();
 
   push();
-  translate((p+75*4),0,0)
+  translate((p+75*4),0,0);
   rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
   model(l);
   pop();
 
   push();
-  translate((p+75*5),0,0)
+  translate((p+75*5),0,0);
   rotateY(map(-mouseX,0,width,(-PI*.2),(PI*.2)));
   model(y);
   pop();
