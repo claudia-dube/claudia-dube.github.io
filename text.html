@@ -1,71 +1,82 @@
 <style>
-canvas{
+  html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
   display: block;
 }
+
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 <script>
-let font, a;
+let font;
 let hasNormalMaterial = true;
-let angle = 0;
-let p = -200
+let p;
+let a;
+  
 
 function preload() {
   font = loadFont('https://claudia-dube.github.io/SwearDisplayDemo-Light.otf')
 }
 
 function setup() {
-  createCanvas(windowWidth, 600, WEBGL);
+  createCanvas(windowWidth,300, WEBGL);
   textFont(font);
-  // letters = ();
+  p = -windowWidth/3;
+  l = width/8;
+  a = 40;
 }
 
 function draw() {
   background('#161616');
-  textAlign(CENTER,CENTER);
-  textSize(100);
+  camera (0,-50,(height)/tan(PI/6), 0,0,0, 0,1,0)
+  textAlign(CENTER,BASELINE);
+  textSize(width/7);
   shininess(0);
   noStroke();
   normalMaterial();
-  scale(1.2);
-
   
   push();
-  translate(p,0,0)
-  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
-  text('S', 0, -10);
+  translate(p,a,0);
+  rotateY(map(mouseX,0,width,(-PI*.2),(PI*.2)));
+  text('S', 0, 0);
   pop();
   
   push();
-  translate(p+75,0,0)
-  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
-  text('O', 0, -10);
+  translate(p+l,a,0);
+  rotateY(map(mouseX,0,width,(-PI*.2),(PI*.2)));
+  text('O', 0, 0);
   pop();
   
   push();
-  translate((p+75*2),0,0)
-  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
-  text('L', 0, -10);
+  translate((p+(l*2)),a,0);
+  rotateY(map(mouseX,0,width,(-PI*.2),(PI*.2)));
+  text('L', 0, 0);
   pop();
   
   push();
-  translate((p+75*3),0,0)
-  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
-  text('E', 0, -10);
+  translate((p+(l*3)),a,0);
+  rotateY(map(mouseX,0,width,(-PI*.2),(PI*.2)));
+  text('E', 0, 0);
   pop();
   
   push();
-  translate((p+75*4),0,0)
-  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
-  text('L', 0, -10);
+  translate((p+(l*4)),a,0);
+  rotateY(map(mouseX,0,width,(-PI*.2),(PI*.2)));
+  text('L', 0, 0);
   pop();
   
   push();
-  translate((p+75*5),0,0)
-  rotateY(map(mouseX,0,height,(-PI*.2),(PI*.2)));
-  text('Y', 0, -10);
+  translate((p+(l*5)),a,0);
+  rotateY(map(mouseX,0,width,(-PI*.2),(PI*.2)));
+  text('Y', 0, 0);
   pop();
 }
-
+function windowResized() {
+  resizeCanvas(windowWidth, 300);
+  p = -windowWidth/3;
+  l = width/8;
+}
 </script>
