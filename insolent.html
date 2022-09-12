@@ -1,0 +1,104 @@
+<style>
+.card-row{
+  width: 1000px;
+  margin: 0 auto;
+}
+.card-container {
+  width: 100%;
+  object-fit: contain;
+}
+
+.card-container:hover .card{
+  transform: rotateY( 180deg );
+}
+
+.back {
+  transform: rotateY( 180deg );
+}
+
+.cards-container{
+  display: flex;
+  width: 100%;
+}
+
+.card {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  aspect-ratio: 5/7;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  box-shadow: 0 1px 6px 0;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  object-fit: cover;  
+}
+
+img {
+ width: 100%;
+}
+</style>
+
+<!-- ROW ONE  -->
+<div class="card-row">
+<div class="cards-container">
+  <!--   1 Card Row 1-->
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+<img src="https://claudia-dube.github.io/insolent_1b.jpg">
+      </div>
+      <div class="back">
+<img src="https://claudia-dube.github.io/insolent_1a.jpg">
+      </div>
+    </div>
+  </div>
+
+    <!--   2 Card Row 1-->
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+<img src="https://claudia-dube.github.io/insolent_2b.jpg">
+      </div>
+      <div class="back">
+<img src="https://claudia-dube.github.io/insolent_2a.jpg">
+      </div>
+    </div>
+  </div>
+
+    <!--   3 Card Row 1-->
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+<img src="https://claudia-dube.github.io/insolent_3b.jpg">
+      </div>
+      <div class="back">
+<img src="https://claudia-dube.github.io/insolent_3a.jpg">
+      </div>
+    </div>
+  </div>
+
+    <!--   4 Card Row 1-->
+  <div class="card-container">
+    <div class="card">
+      <div class="front">
+<img src="https://claudia-dube.github.io/insolent_4b.jpg">
+      </div>
+      <div class="back">
+<img src="https://claudia-dube.github.io/insolent_4a.jpg">
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+</div>
