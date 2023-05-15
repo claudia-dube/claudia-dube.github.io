@@ -1,103 +1,46 @@
 <style>
-   .patterns {
-   position: relative;
-   max-width: 500px;
-   top: 100px;
-   margin: auto;
-   }
-   .pattern {
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 700px;
-   height: auto;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   }
-   .pattern img {
-   display: block;
-   width: 100%;
-   height: auto;  
-   }
+.patterns {
+  position: relative;
+  max-width: 500px;
+  top: 100px;
+  margin: auto;
+}
+.pattern {
+  position: absolute;
+  left: 0;
+  width: 700px;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pattern img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-   .pattern1 {
-   top: 0px;
-   transform: rotate(7deg);
-   left: -35px;
-   top:50px;
-   }
+.pattern1 {
+  top: 0px;
+  transform: rotate(7deg);
+  left: -35px;
+  top:50px;
+}
 
-   .pattern2 {
-   transform: rotate(0deg);
-   top: 60px;
-   left: -60px;
-   }
-   .pattern3 {
-   transform: rotate(-5deg);
-   top: 190px;
-   left: -140px;
-   }
-   .pattern4 {
-   transform: rotate(5deg);
-    top: 180px;
-    left: 30px; 
-   }
+.pattern2 {
+  transform: rotate(0deg);
+  top: 60px;
+  left: -60px;
+}
+.pattern3 {
+  transform: rotate(-5deg);
+  top: 190px;
+  left: -140px;
+}
+ .pattern4 {
+  transform: rotate(5deg);
+   top: 180px;
+   left: 30px; 
+}
 </style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
-<script>
-   $(document).ready(function () {
-     $(function () {
-       var i = 0;
-       $("div.pattern1").click(function () {
-         $(this)
-           .animate(
-             { marginLeft: -5 + "%", marginTop: -10 + "%" },
-             300,
-             function () {
-               i++;
-               $(this).css("z-index", i);
-             }
-           )
-           .animate({ marginLeft: 0 + "%", marginTop: 0 + "em" }, 300);
-       });
-       $("div.pattern2").click(function () {
-         $(this)
-           .animate(
-             { marginLeft: 10 + "%", marginTop: -5 + "%" },
-             300,
-             function () {
-               i++;
-               $(this).css("z-index", i);
-             }
-           )
-           .animate({ marginLeft: 0 + "%", marginTop: 0 + "em" }, 300);
-       });
-       $("div.pattern3").click(function () {
-         $(this)
-           .animate(
-             { marginLeft: -10 + "%", marginTop: 10 + "%" },
-             300,
-             function () {
-               i++;
-               $(this).css("z-index", i);
-             }
-           )
-           .animate({ marginLeft: 0 + "%", marginTop: 0 + "em" }, 300);
-       });
-       $("div.pattern4").click(function () {
-         $(this)
-           .animate(
-             { marginLeft: 5 + "%", marginTop: 10 + "%" },
-             300,
-             function () {
-               i++;
-               $(this).css("z-index", i);
-             }
-           )
-           .animate({ marginLeft: 0 + "%", marginTop: 0 + "em" },300);
-       });
-     });
-   });
-</script>
 
  <div class="patterns">
    <div class="pattern pattern1">
@@ -113,3 +56,59 @@
      <img id="pattern4" src="https://dl.dropbox.com/s/4knfxe6ajcmfv08/testimonials-07.png?dl=0">
    </div>  
  </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+<script>
+$(document).ready(function () {
+  $(function () {
+    var i = 0;
+    $("div.pattern1").click(function () {
+      $(this)
+        .animate(
+          { marginLeft: -5 + "%", marginTop: -10 + "%" },
+          300,
+          function () {
+            i++;
+            $(this).css("z-index", i);
+          }
+        )
+        .animate({ marginLeft: 0 + "%", marginTop: 0 + "px" }, 300);
+    });
+    $("div.pattern2").click(function () {
+      $(this)
+        .animate(
+          { marginLeft: 10 + "%", marginTop: -5 + "%" },
+          300,
+          function () {
+            i++;
+            $(this).css("z-index", i);
+          }
+        )
+        .animate({ marginLeft: 0 + "%", marginTop: 0 + "px" }, 300);
+    });
+    $("div.pattern3").click(function () {
+      $(this)
+        .animate(
+          { marginLeft: -10 + "%", marginTop: 10 + "%" },
+          300,
+          function () {
+            i++;
+            $(this).css("z-index", i);
+          }
+        )
+        .animate({ marginLeft: 0 + "%", marginTop: 0 + "px" }, 300);
+    });
+    $("div.pattern4").click(function () {
+      $(this)
+        .animate(
+          { marginLeft: 5 + "%", marginTop: 10 + "%" },
+          300,
+          function () {
+            i++;
+            $(this).css("z-index", i);
+          }
+        )
+        .animate({ marginLeft: 0 + "%", marginTop: 0 + "px" },300);
+    });
+  });
+});
+</script>
